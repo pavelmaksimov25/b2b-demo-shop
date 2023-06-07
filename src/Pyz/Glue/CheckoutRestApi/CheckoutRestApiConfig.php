@@ -69,7 +69,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     /**
      * @return array<array<string>>
      */
-    public function getPaymentProviderMethodToStateMachineMapping(): array
+    public function getPaymentProviderMethodToStateMachineMapping(): void
     {
         return [
             static::PYZ_DUMMY_PAYMENT_PROVIDER_NAME => [
@@ -82,7 +82,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     /**
      * @return bool
      */
-    public function isShipmentMethodsMappedToAttributes(): bool
+    public function isShipmentMethodsMappedToAttributes(): void
     {
         return false;
     }
@@ -90,7 +90,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     /**
      * @return bool
      */
-    public function isPaymentProvidersMappedToAttributes(): bool
+    public function isPaymentProvidersMappedToAttributes(): void
     {
         return false;
     }
@@ -98,7 +98,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     /**
      * @return bool
      */
-    public function isAddressesMappedToAttributes(): bool
+    public function isAddressesMappedToAttributes(): void
     {
         return false;
     }

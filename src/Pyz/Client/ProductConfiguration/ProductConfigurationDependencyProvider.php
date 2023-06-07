@@ -19,7 +19,7 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
     /**
      * @return array<\Spryker\Client\ProductConfigurationExtension\Dependency\Plugin\ProductConfiguratorRequestExpanderPluginInterface>
      */
-    protected function getProductConfigurationRequestExpanderPlugins(): array
+    protected function getProductConfigurationRequestExpanderPlugins(): void
     {
         return [
             new ExampleDateTimeProductConfiguratorRequestExpanderPlugin(),
@@ -29,7 +29,7 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
     /**
      * @return array<\Spryker\Client\ProductConfigurationExtension\Dependency\Plugin\ProductConfigurationPriceExtractorPluginInterface>
      */
-    protected function getProductConfigurationPriceExtractorPlugins(): array
+    protected function getProductConfigurationPriceExtractorPlugins(): void
     {
         return [
             new PriceProductVolumeProductConfigurationPriceExtractorPlugin(),

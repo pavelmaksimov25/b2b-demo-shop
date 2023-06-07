@@ -11,6 +11,7 @@ use Spryker\Zed\User\UserConfig as SprykerUserConfig;
 
 class UserConfig extends SprykerUserConfig
 {
+    public const IS_POST_SAVE_PLUGINS_ENABLED_AFTER_USER_STATUS_CHANGE = true;
     /**
      * @return array
      */
