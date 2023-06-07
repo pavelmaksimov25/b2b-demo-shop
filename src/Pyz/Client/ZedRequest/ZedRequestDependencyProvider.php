@@ -8,6 +8,7 @@
 namespace Pyz\Client\ZedRequest;
 
 use Spryker\Client\Currency\Plugin\ZedRequestMetaDataProviderPlugin;
+use Spryker\Client\Store\Plugin\ZedRequest\StoreMetaDataProviderPlugin;
 use Spryker\Client\ZedRequest\Plugin\AcceptEncodingHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\AuthTokenHeaderExpanderPlugin;
 use Spryker\Client\ZedRequest\Plugin\RequestIdHeaderExpanderPlugin;
@@ -21,7 +22,7 @@ class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
     protected function getMetaDataProviderPlugins(): array
     {
         return [
-            'currency' => new ZedRequestMetaDataProviderPlugin(),
+            'currency' => new ZedRequestMetaDataProviderPlugin(), 'store' => new StoreMetaDataProviderPlugin(),
         ];
     }
 
