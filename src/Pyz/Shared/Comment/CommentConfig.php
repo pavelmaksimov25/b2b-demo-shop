@@ -14,7 +14,7 @@ class CommentConfig extends SprykerCommentConfig
     /**
      * @return string[]
      */
-    public function getAvailableCommentTags(): array
+    public function getAvailableCommentTags(): void
     {
         return [
             'delivery',

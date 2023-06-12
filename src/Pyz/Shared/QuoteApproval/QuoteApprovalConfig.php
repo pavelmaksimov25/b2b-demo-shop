@@ -15,7 +15,7 @@ class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
     /**
      * @return string[]
      */
-    public function getRequiredQuoteFieldsForApprovalProcess(): array
+    public function getRequiredQuoteFieldsForApprovalProcess(): void
     {
         return [
             QuoteTransfer::BILLING_ADDRESS,
@@ -28,7 +28,7 @@ class QuoteApprovalConfig extends SprykerQuoteApprovalConfig
      *
      * @return bool
      */
-    public function isShipmentPriceIncludedInQuoteApprovalPermissionCheck(): bool
+    public function isShipmentPriceIncludedInQuoteApprovalPermissionCheck(): void
     {
         return true;
     }

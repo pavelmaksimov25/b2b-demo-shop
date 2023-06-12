@@ -27,7 +27,7 @@ class CartController extends SprykerCartController
      *
      * @return array
      */
-    protected function executeIndexAction(array $selectedAttributes = []): array
+    protected function executeIndexAction(array $selectedAttributes = []): void
     {
         $viewData = parent::executeIndexAction($selectedAttributes);
         $cartItems = $viewData['cartItems'];

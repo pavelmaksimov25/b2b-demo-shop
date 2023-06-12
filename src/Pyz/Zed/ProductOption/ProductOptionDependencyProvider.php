@@ -8,6 +8,7 @@
 namespace Pyz\Zed\ProductOption;
 
 use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\MerchantProductOption\Communication\Plugin\ProductOption\MerchantProductOptionGroupExpanderPlugin;
 use Spryker\Zed\MoneyGui\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ProductOption\ProductOptionDependencyProvider as SprykerProductOptionDependencyProvider;
 use Spryker\Zed\ShoppingListProductOptionConnector\Communication\Plugin\ProductOption\ShoppingListItemsProductOptionValuesPreRemovePlugin;
@@ -31,6 +32,15 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     {
         return [
             new ShoppingListItemsProductOptionValuesPreRemovePlugin(),
+        ];
+    }
+    /**
+     * @return array<\Spryker\Zed\ProductOptionExtension\Dependency\Plugin\ProductOptionGroupExpanderPluginInterface>
+     */
+    protected function getProductOptionGroupExpanderPlugins() : array
+    {
+        return [
+            new MerchantProductOptionGroupExpanderPlugin(),
         ];
     }
 }

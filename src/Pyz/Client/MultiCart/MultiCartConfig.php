@@ -7,7 +7,9 @@
 
 namespace Pyz\Client\MultiCart;
 
+use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\StoreTransfer;
 use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
 
 class MultiCartConfig extends SprykerMultiCartConfig
@@ -21,5 +23,20 @@ class MultiCartConfig extends SprykerMultiCartConfig
             QuoteTransfer::BUNDLE_ITEMS,
             QuoteTransfer::CART_NOTE, #CartNoteFeature
         ]);
+    }
+    /**
+     * @return array
+     */
+    public function getQuoteFieldsAllowedForCustomerQuoteCollectionInSession() : array
+    {
+        return [
+            QuoteTransfer::CUSTOMER => [
+                CustomerTransfer::CUSTOMER_REFERENCE,
+            ],
+            QuoteTransfer::STORE => [
+                StoreTransfer::ID_STORE,
+                StoreTransfer::NAME,
+            ],
+        ];
     }
 }

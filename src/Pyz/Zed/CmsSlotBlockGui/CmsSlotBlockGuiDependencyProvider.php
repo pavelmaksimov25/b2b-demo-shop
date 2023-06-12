@@ -17,7 +17,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
     /**
      * @return \Spryker\Zed\CmsSlotBlockGuiExtension\Communication\Plugin\CmsSlotBlockGuiConditionFormPluginInterface[]
      */
-    protected function getCmsSlotBlockFormPlugins(): array
+    protected function getCmsSlotBlockFormPlugins(): void
     {
         return [
             new CategorySlotBlockConditionFormPlugin(),

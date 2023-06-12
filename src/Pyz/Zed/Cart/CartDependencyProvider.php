@@ -22,7 +22,11 @@ use Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart\ConfiguredBundl
 use Spryker\Zed\Discount\Communication\Plugin\Cart\DiscountQuoteChangeObserverPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Cart\CartGroupPromotionItems;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Cart\DiscountPromotionCartPreCheckPlugin;
+use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardMetadataExpanderPlugin;
 use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\MerchantProductOption\Communication\Plugin\Cart\MerchantProductOptionCartPreCheckPlugin;
+use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Cart\SingleMerchantCartPreCheckPlugin;
+use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Cart\SingleMerchantPreReloadItemsPlugin;
 use Spryker\Zed\PaymentCartConnector\Communication\Plugin\Cart\RemovePaymentCartPostSavePlugin;
 use Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart\SanitizeSourcePricesQuoteLockPreResetPlugin;
 use Spryker\Zed\PriceCartConnector\Communication\Plugin\CartItemPricePlugin;
@@ -112,6 +116,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new SanitizeCartShipmentItemExpanderPlugin(),
             new GroupKeyWithCartIdentifierItemExpanderPlugin(),
             new ProductConfigurationGroupKeyItemExpanderPlugin(),
+            new GiftCardMetadataExpanderPlugin(),
         ];
     }
 
@@ -153,6 +158,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ConfiguredBundleTemplateSlotCombinationPreCheckPlugin(),
             new ProductMeasurementSalesUnitCartPreCheckPlugin(),
             new DiscountPromotionCartPreCheckPlugin(),
+            new MerchantProductOptionCartPreCheckPlugin(),
+            new SingleMerchantCartPreCheckPlugin(),
         ];
     }
 
@@ -189,6 +196,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new CleanUpItemsPreReloadPlugin(),
             new FilterItemsWithoutPricePlugin(),
             new ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin(),
+            new SingleMerchantPreReloadItemsPlugin(),
         ];
     }
 

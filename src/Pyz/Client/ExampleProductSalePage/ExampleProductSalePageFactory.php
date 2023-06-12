@@ -61,7 +61,7 @@ class ExampleProductSalePageFactory extends AbstractFactory
     /**
      * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
-    protected function getSaleSearchQueryExpanderPlugins(): array
+    protected function getSaleSearchQueryExpanderPlugins(): void
     {
         return $this->getProvidedDependency(ExampleProductSalePageDependencyProvider::PYZ_SALE_SEARCH_QUERY_EXPANDER_PLUGINS);
     }
@@ -69,7 +69,7 @@ class ExampleProductSalePageFactory extends AbstractFactory
     /**
      * @return \Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface[]
      */
-    public function getSaleSearchResultFormatterPlugins(): array
+    public function getSaleSearchResultFormatterPlugins(): void
     {
         return $this->getProvidedDependency(ExampleProductSalePageDependencyProvider::PYZ_SALE_SEARCH_RESULT_FORMATTER_PLUGINS);
     }
