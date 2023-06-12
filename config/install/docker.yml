@@ -96,40 +96,40 @@ sections:
         jenkins-clean:
             command: 'vendor/bin/console scheduler:clean'
 
-    init-storages-per-store:
-        queue-setup:
-            command: 'vendor/bin/console queue:setup'
-        setup-search-create-sources:
-            command: 'vendor/bin/console search:setup:sources'
+#    init-storages-per-store:
+#        queue-setup:
+#            command: 'vendor/bin/console queue:setup'
+#        setup-search-create-sources:
+#            command: 'vendor/bin/console search:setup:sources'
+#
+#    init-storages-per-region:
+#        propel-copy-schema:
+#            command: 'vendor/bin/console propel:schema:copy'
+#
+#        propel-postgres-compatibility:
+#            command: 'vendor/bin/console propel:pg-sql-compat'
+#
+#        propel-migration-delete:
+#            command: 'vendor/bin/console propel:migration:delete'
+#
+#        propel-tables-drop:
+#            command: 'vendor/bin/console propel:tables:drop'
+#
+#        propel-diff:
+#            command: 'vendor/bin/console propel:diff'
+#
+#        propel-migrate:
+#            command: 'vendor/bin/console propel:migrate'
+#
+#        propel-migration-cleanup:
+#            command: 'vendor/bin/console propel:migration:delete'
+#
+#        init-database:
+#            command: 'vendor/bin/console setup:init-db'
 
-    init-storages-per-region:
-        propel-copy-schema:
-            command: 'vendor/bin/console propel:schema:copy'
-
-        propel-postgres-compatibility:
-            command: 'vendor/bin/console propel:pg-sql-compat'
-
-        propel-migration-delete:
-            command: 'vendor/bin/console propel:migration:delete'
-
-        propel-tables-drop:
-            command: 'vendor/bin/console propel:tables:drop'
-
-        propel-diff:
-            command: 'vendor/bin/console propel:diff'
-
-        propel-migrate:
-            command: 'vendor/bin/console propel:migrate'
-
-        propel-migration-cleanup:
-            command: 'vendor/bin/console propel:migration:delete'
-
-        init-database:
-            command: 'vendor/bin/console setup:init-db'
-
-    demodata:
-        import-demodata:
-            command: 'vendor/bin/console data:import --config=data/import/local/full_${SPRYKER_REGION}.yml'
-
-        update-product-labels:
-            command: 'vendor/bin/console product-label:relations:update'
+#    demodata:
+#        import-demodata:
+#            command: 'vendor/bin/console data:import --config=data/import/local/full_${SPRYKER_REGION}.yml'
+#
+#        update-product-labels:
+#            command: 'vendor/bin/console product-label:relations:update'
