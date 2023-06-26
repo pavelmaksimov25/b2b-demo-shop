@@ -394,7 +394,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     protected function getControllerBeforeActionPlugins(): array
     {
         return [
-            new SetStoreCurrentLocaleBeforeActionPlugin(),
             new SetCustomerBeforeActionPlugin(),
             new SetAnonymousCustomerIdControllerBeforeActionPlugin(),
             new SetCurrencyBeforeActionPlugin(),
