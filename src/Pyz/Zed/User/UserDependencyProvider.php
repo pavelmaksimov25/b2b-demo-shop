@@ -15,6 +15,7 @@ use Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExp
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
 use Spryker\Zed\UserLocale\Communication\Plugin\User\AssignUserLocalePreSavePlugin;
+use Spryker\Zed\UserLocale\Communication\Plugin\User\LocaleUserExpanderPlugin;
 use Spryker\Zed\UserLocale\Communication\Plugin\User\UserLocaleTransferExpanderPlugin;
 use Spryker\Zed\UserLocaleGui\Communication\Plugin\UserLocaleFormExpanderPlugin;
 
@@ -91,7 +92,15 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     protected function getUserTransferExpanderPlugins(): array
     {
         return [
-            new UserLocaleTransferExpanderPlugin(),
+        ];
+    }
+    /**
+     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserExpanderPluginInterface>
+     */
+    protected function getUserExpanderPlugins() : array
+    {
+        return [
+            new LocaleUserExpanderPlugin(),
         ];
     }
 }

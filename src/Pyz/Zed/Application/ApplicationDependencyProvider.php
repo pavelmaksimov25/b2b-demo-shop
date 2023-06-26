@@ -23,11 +23,14 @@ use Spryker\Zed\Router\Communication\Plugin\Application\BackofficeRouterApplicat
 use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin;
 use Spryker\Zed\Session\Communication\Plugin\Application\MockArraySessionApplicationPlugin;
 use Spryker\Zed\Session\Communication\Plugin\Application\SessionApplicationPlugin;
+use Spryker\Zed\Store\Communication\Plugin\Application\BackofficeStoreApplicationPlugin;
+use Spryker\Zed\Store\Communication\Plugin\Application\StoreBackendGatewayApplicationPlugin;
 use Spryker\Zed\Translator\Communication\Plugin\Application\TranslatorApplicationPlugin;
 use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
 use Spryker\Zed\UtilNumber\Communication\Plugin\Application\NumberFormatterApplicationPlugin;
 use Spryker\Zed\Validator\Communication\Plugin\Application\ValidatorApplicationPlugin;
 use Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin;
+use Spryker\Zed\ZedRequest\Communication\Plugin\Application\RequestBackendGatewayApplicationPlugin;
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
@@ -61,6 +64,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             new ValidatorApplicationPlugin(),
             new SecurityApplicationPlugin(),
             new NumberFormatterApplicationPlugin(),
+            new BackofficeStoreApplicationPlugin(),
         ];
 
         if (class_exists(WebProfilerApplicationPlugin::class)) {
@@ -83,6 +87,8 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             new PropelApplicationPlugin(),
             new BackendGatewayRouterApplicationPlugin(),
             new HttpApplicationPlugin(),
+            new StoreBackendGatewayApplicationPlugin(),
+            new RequestBackendGatewayApplicationPlugin(),
         ];
     }
 
