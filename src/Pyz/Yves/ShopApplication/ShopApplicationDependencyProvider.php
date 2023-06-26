@@ -324,7 +324,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             new TwigApplicationPlugin(),
             new EventDispatcherApplicationPlugin(),
             new ShopApplicationApplicationPlugin(),
-            new StoreApplicationPlugin(),
             new LocaleApplicationPlugin(),
             new TranslatorApplicationPlugin(),
             new RouterApplicationPlugin(),
