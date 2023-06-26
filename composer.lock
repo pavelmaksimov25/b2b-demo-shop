@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7025323cf9dcf6014ab3e2b4674dfb24",
+    "content-hash": "273a7898b6eebe2892b8d7bc3c2125ef",
     "packages": [
         {
             "name": "async-aws/core",
@@ -29400,16 +29400,16 @@
         },
         {
             "name": "spryker/gui",
-            "version": "3.48.0",
+            "version": "3.49.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/gui.git",
-                "reference": "e32ef19429945725010b73cf7693f44d180e527a"
+                "reference": "e9f0c145a7064d1bbdbf6ac89a7295b21bed3632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/gui/zipball/e32ef19429945725010b73cf7693f44d180e527a",
-                "reference": "e32ef19429945725010b73cf7693f44d180e527a",
+                "url": "https://api.github.com/repos/spryker/gui/zipball/e9f0c145a7064d1bbdbf6ac89a7295b21bed3632",
+                "reference": "e9f0c145a7064d1bbdbf6ac89a7295b21bed3632",
                 "shasum": ""
             },
             "require": {
@@ -29433,6 +29433,7 @@
                 "spryker/container": "*",
                 "spryker/propel": "*",
                 "spryker/silex": "*",
+                "spryker/store": "*",
                 "spryker/testify": "*"
             },
             "suggest": {
@@ -29457,9 +29458,9 @@
             ],
             "description": "Gui module",
             "support": {
-                "source": "https://github.com/spryker/gui/tree/3.48.0"
+                "source": "https://github.com/spryker/gui/tree/3.49.2"
             },
-            "time": "2023-03-13T13:20:27+00:00"
+            "time": "2023-04-06T07:25:58+00:00"
         },
         {
             "name": "spryker/gui-table",
